@@ -1,20 +1,20 @@
 import styled from "styled-components"
 
-function Section() {
+function Section({model, tagline, img, leftBtnText, rightBtnText}) {
     return (
-        <Wrap>
+        <Wrap bgImage={img}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for touchless delivery</p>
+                <h1>{model} </h1>
+                <p>{tagline}</p>
             </ItemText>
 
             <Buttons>
                 <ButtonGroup>
                     <LeftButton> 
-                        Custom Order
+                        {leftBtnText}
                     </LeftButton>
                     <RightButton>
-                        Existing Invenroty
+                        {rightBtnText}
                     </RightButton>
                 </ButtonGroup>
 
@@ -30,7 +30,6 @@ export default Section
 const Wrap = styled.div`
     width:100vw;
     height: 100vh;
-    background: url('/images/model-s.jpg');
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -38,7 +37,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between; //vertical
     align-items: center; //horizontal
-
+    background-image: ${props=> `url(${props.bgImage})`}
 
 `;
 
