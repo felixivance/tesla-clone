@@ -5,7 +5,11 @@ function Section({model, tagline, img, leftBtnText, rightBtnText}) {
         <Wrap bgImage={img}>
             <ItemText>
                 <h1>{model} </h1>
-                <p>{tagline}</p>
+               {
+                   tagline && (
+                        <p>{tagline}</p>
+                   )
+               }
             </ItemText>
 
             <Buttons>
@@ -13,9 +17,14 @@ function Section({model, tagline, img, leftBtnText, rightBtnText}) {
                     <LeftButton> 
                         {leftBtnText}
                     </LeftButton>
-                    <RightButton>
-                        {rightBtnText}
-                    </RightButton>
+                    {
+                        rightBtnText && (
+                            <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        )
+                    }
+                    
                 </ButtonGroup>
 
                 <DownArrow src="/images/down-arrow.svg" />
