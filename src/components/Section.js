@@ -1,16 +1,20 @@
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 
 function Section({model, tagline, img, leftBtnText, rightBtnText}) {
     return (
         <Wrap bgImage={img}>
-            <ItemText>
-                <h1>{model} </h1>
-               {
-                   tagline && (
-                        <p>{tagline}</p>
-                   )
-               }
-            </ItemText>
+            <Fade bottom> 
+                <ItemText>
+                    <h1>{model} </h1>
+                {
+                    tagline && (
+                            <p>{tagline}</p>
+                    )
+                }
+                </ItemText>
+            </Fade>
+            
 
             <Buttons>
                 <ButtonGroup>
