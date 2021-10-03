@@ -50,6 +50,9 @@ const ItemText=  styled.div`
 const ButtonGroup = styled.div`
     display:flex;
     margin-botton: 30px;
+    @media( max-width: 768px){
+        flex-direction: column;
+    }
 
 `;
 
@@ -71,12 +74,16 @@ const LeftButton = styled.div`
 `;
 
 const RightButton = styled(LeftButton)`
+    background: white;
+    opacity: 0.65;
+    color: black;
 `
 
 const DownArrow = styled.img`
     margin-top: 20px;
     height: 40px;
     animation: animateDown infinite 1.5s;
+    overflow-x: hidden;
 `
 
 const Buttons = styled.div`
