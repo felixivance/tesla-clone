@@ -20,8 +20,6 @@ function Header() {
                 <a href="">Shop</a>
                 <a href="">Tesla Account</a>
                 <CustomMenu />
-
-             
             </RightMenu>
 
             <BurgerMenu> 
@@ -30,7 +28,6 @@ function Header() {
                     <li><a href="">Cyber Truck</a></li>
                     <li><a href="">RoadStar</a></li>
                     <li><a href="">Semi</a></li>
-                
             </BurgerMenu>
         </Container>
     )
@@ -87,11 +84,22 @@ const CustomMenu = styled(MenuIcon)`
 `;
 
 const BurgerMenu = styled.div`
-    postion: fixed;
-    top:0;
+    position: fixed;
+    top: 0;
     bottom: 0;
     right: 0;
     background:white;
     width:300px;
-    z-index:100;
+    list-style: none;
+    padding: 20px;
+    text-align: start;
+    li{
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+        a{
+            font-weight: 600
+        }
+    }
+    
 `;
