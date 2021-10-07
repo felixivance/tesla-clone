@@ -25,8 +25,6 @@ function Header() {
                         <a  href="" key={index}>{car}</a> 
                     ))
                 }
-                 
-            
             </Menu>
             {/*right   */}
             <RightMenu>
