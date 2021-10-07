@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 function Header() {
     return (
@@ -23,6 +24,10 @@ function Header() {
             </RightMenu>
 
             <BurgerMenu> 
+                    <CloseWrapper>
+                        <CustomClose />
+                    </CloseWrapper>
+                   
                     <li><a href="">Existing Inventory</a></li>
                     <li><a href="">Used Inventory</a></li>
                     <li><a href="">Cyber Truck</a></li>
@@ -103,3 +108,12 @@ const BurgerMenu = styled.div`
     }
     
 `;
+
+const CustomClose = styled(CloseIcon)`
+
+`
+
+const CloseWrapper = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`
